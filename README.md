@@ -1,4 +1,4 @@
-﻿# VoynichManuscript
+﻿# VoynichManuscript Page 22r
 IST 242 - Dayon McCray
 
 This is a project i produced for the voynich manuscript page 22R. 
