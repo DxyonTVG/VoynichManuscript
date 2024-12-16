@@ -14,7 +14,7 @@ import java.util.*;
  * Author: Dayon McCray
  * Date Developed: 12/2/2024
  * Last Date Changed: 12/15/2024
- * Rev: Added code to read all the manuscript from the page. Also added translations and NOTESSSSS!!!
+ * Rev: Added code to read all the manuscript from the page. Also added translations and NOTESSSSS!!!!
  */
 
 /**
