@@ -5,7 +5,7 @@ This is a project i produced for the voynich manuscript page 22R.
 This includes dictionaries from 6 different languages 
 With a few matches I made out what this page may be about ! (in the notes section)
 
-Languages used were Gernman, Middle English, French, Latin, Italian, Britian 
+Languages used were German, Middle English, French, Latin, Italian, Britian 
 
 The most words that were found or atleast traced back to a known langauge was Middle English. 
 
