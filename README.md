@@ -35,6 +35,12 @@ Oty means over the year which derives from english military and government!
 
 Thats the most I could make out and is probably the theme of that page. 
 
+Word Summary: 
+Middle English [16]
+British [2]
+French [3]
+
+
 
 Credit to:
 https://www.voynich.nu/q03/f022r_tr.txt

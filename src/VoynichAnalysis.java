@@ -5,8 +5,6 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.util.*;
 
-
-
 /**
  * Project: Voynich Manuscript Project
  * Purpose Details: Figure out what this thing means!!!!
@@ -20,15 +18,13 @@ import java.util.*;
 /**
  * Resources:
  * String Splitting - https://www.geeksforgeeks.org/split-string-java-examples/#
- * Spliting Strings Into Tokens - https://stackoverflow.com/questions/18739190/splitting-a-string-into-tokens
+ * Splitting Strings Into Tokens - https://stackoverflow.com/questions/18739190/splitting-a-string-into-tokens
  * HashMap in Java - https://www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/
  * Voynich Page Text - https://www.voynich.nu/q03/f022r_tr.txt
- * What we know about the Voynich Manuscipt - https://aclanthology.org/W11-1511.pdf
+ * What we know about the Voynich Manuscript - https://aclanthology.org/W11-1511.pdf
  * The Voynich Manuscript - https://collections.library.yale.edu/catalog/2002046
- * ChatGPT - Resources for Dictionary implementation, String Splitting  and Token HELP
+ * ChatGPT - Resources for Dictionary implementation, String Splitting and Token HELP
  */
-
-
 
 public class VoynichAnalysis {
 
@@ -53,7 +49,7 @@ public class VoynichAnalysis {
             return;
         }
 
-        //No we perform a lookup from the manuscript to see if we get and word hits from our dictionary!!!
+        // No we perform a lookup from the manuscript to see if we get any word hits from our dictionary!!!
         analyzeText(textToAnalyze, dictionaries);
     }
 
@@ -84,7 +80,7 @@ public class VoynichAnalysis {
      *
      * @param resourcePath Path to the dictionaries folder in the resources directory.
      * @return the language and the words according to the dictionary!!
-     * Needed help from ChatGPT to implement the right resources code so it can find the dictionaries, Everytime i tried i kept getting an error!
+     * Needed help from ChatGPT to implement the right resources code so it can find the dictionaries, Everytime I tried I kept getting an error!
      */
     private static Map<String, Set<String>> loadDictionaries(String resourcePath) {
         Map<String, Set<String>> dictionaries = new HashMap<>();
@@ -119,15 +115,18 @@ public class VoynichAnalysis {
     /**
      * Analyzes the manuscript text by comparing it to words in the language dictionary.
      *
-     * @param text        Analyze the text from the manuscript!
+     * @param text         Analyze the text from the manuscript!
      * @param dictionaries The dictionaries loaded from resources.
-     *    Had to use ChatGPT to implement the tokens for the split text using "." delimiter!
+     * Had to use ChatGPT to implement the tokens for the split text using "." delimiter! And adding function for word matching!!
      */
     private static void analyzeText(String text, Map<String, Set<String>> dictionaries) {
         System.out.println("Analyzing text: " + text);
 
         // Split the text using "." as the delimiter
         String[] tokens = text.split("\\.");
+
+        // Track the dictionary matches
+        Map<String, Integer> matchCounts = new HashMap<>();
 
         for (String token : tokens) {
             boolean matched = false;
@@ -136,16 +135,25 @@ public class VoynichAnalysis {
                 String language = entry.getKey();
                 Set<String> words = entry.getValue();
 
-                if (words.contains(token)) {
-                    System.out.println("Found match: '" + token + "' in " + language + " dictionary.");
+                if (words.contains(token.trim())) {
+                    System.out.println("Found match: '" + token.trim() + "' in " + language + " dictionary.");
                     matched = true;
+
+                    // Matches for the dictionary language!
+                    matchCounts.put(language, matchCounts.getOrDefault(language, 0) + 1);
                     break;
                 }
             }
 
             if (!matched) {
-                System.out.println("No match found for: '" + token + "'");
+                System.out.println("I cant find the match for: '" + token.trim() + "'");
             }
+        }
+
+        // Print summary of matches for each dictionary
+        System.out.println("\nMatches:");
+        for (Map.Entry<String, Integer> entry : matchCounts.entrySet()) {
+            System.out.println(entry.getKey() + " [" + entry.getValue() + "]");
         }
     }
 }
