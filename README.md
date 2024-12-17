@@ -29,7 +29,7 @@ dpchy doesnt have a direct meaning to any known languages but it closely resembl
 a word derived from french's douche' which is derived from latin 'DUX' which means leader!!
 
 Translation 2!!!
-Pol Olshy = Polticians argues to make something difficult for crimes commited in large quantities of people with a leader??
+Pol Olshy  Fcholy shol dpchy = Polticians argues to make something difficult for crimes commited in large quantities of people with a leader??
 
 Oty means over the year which derives from english military and government!
 
