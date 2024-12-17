@@ -50,6 +50,3 @@ dchor.dy!dain.qockhy.ykal!okain=
 dchor.dy.dain.qockhy.ykol.okain=
 dchor.dyd!ain.qockhy.ykal.okain=
 #
-
-// https://www.voynich.nu/q03/f022r_tr.txt
-//https://aclanthology.org/W11-1511.pdf
